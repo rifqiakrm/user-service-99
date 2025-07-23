@@ -125,3 +125,12 @@ curl http://localhost:8080/users?page=1&size=10
 * Table-driven unit tests
 * Mock-based service and repo testing
 * SQLite in-memory support for test isolation
+
+---
+
+## 🔖 Author
+Rifqi Fauzan Akram  
+Email: rifqiakram57@gmail.com  
+GitHub: [@rifqiakrm](https://github.com/rifqiakrm)
+
+---
