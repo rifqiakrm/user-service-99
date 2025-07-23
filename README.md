@@ -46,10 +46,10 @@ user-service/
 ## 🚀 Running the Service
 
 ```bash
-go run ./cmd/main.go
+go run main.go
 ```
 
-By default, service listens on port `:8080`.
+By default, service listens on port `:6001`.
 
 ---
 
@@ -89,7 +89,7 @@ go install github.com/golang/mock/mockgen@v1.6.0
 ### Example: Create User
 
 ```bash
-curl -X POST http://localhost:8080/users -H "Content-Type: application/json" -d '{"name":"John"}'
+curl -X POST http://localhost:6001/users -H "Content-Type: application/json" -d '{"name":"John"}'
 ```
 
 ### Example: Get Users By IDs
@@ -108,13 +108,13 @@ curl --location 'localhost:6001/users/batch' \
 ### Example: Get User
 
 ```bash
-curl http://localhost:8080/users/1
+curl http://localhost:6001/users/1
 ```
 
 ### Example: Get All Users (page=1, size=10)
 
 ```bash
-curl http://localhost:8080/users?page=1&size=10
+curl http://localhost:6001/users?page=1&size=10
 ```
 
 ---
