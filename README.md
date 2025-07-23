@@ -79,16 +79,30 @@ go install github.com/golang/mock/mockgen@v1.6.0
 
 ## 📌 API Endpoints
 
-| Method | Endpoint     | Description               |
-| ------ | ------------ | ------------------------- |
-| POST   | `/users`     | Create a new user         |
-| GET    | `/users/:id` | Get user by ID            |
-| GET    | `/users`     | Get all users (paginated) |
+| Method | Endpoint       | Description               |
+|--------|----------------|---------------------------|
+| POST   | `/users`       | Create a new user         |
+| POST   | `/users/batch` | Get users by IDs          |
+| GET    | `/users/:id`   | Get user by ID            |
+| GET    | `/users`       | Get all users (paginated) |
 
 ### Example: Create User
 
 ```bash
 curl -X POST http://localhost:8080/users -H "Content-Type: application/json" -d '{"name":"John"}'
+```
+
+### Example: Get Users By IDs
+
+```bash
+curl --location 'localhost:6001/users/batch' \
+--header 'Content-Type: application/json' \
+--data '{
+    "user_ids":[
+        1,
+        8
+    ]
+}'
 ```
 
 ### Example: Get User
